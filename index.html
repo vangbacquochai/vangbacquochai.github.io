@@ -2,15 +2,31 @@
 <meta charset="UTF-8">
 <meta>
 <style>
-body { 
-    background: #A41101 ;
-     
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-.chay {margin-top:2px;background-color: black;padding-top:0px; padding-bottom: 0px; color: #0073dd;
-word-spacing: 15px;  font-weight: 900;
-font-family: verdana;
-
-font-size:65px;
+body { 
+  background: #A41101;     
+}
+.title {
+	height: 270px;
+	z-index: 999;
+	background-color: black;
+}
+.chay {
+	margin-top:2px;
+	background-color: black;
+	padding-top:0px; 
+	padding-bottom: 0px; 
+	color: #0073dd;
+	word-spacing: 15px;  
+	font-weight: 900;
+	font-family: verdana;
+	font-size:65px;
+	position: fixed;
+	bottom: 0;
 }
 
 table,th,td,tr #main{
@@ -100,11 +116,23 @@ table,th,td,tr #main{
    
     
 	}
+
 #clock {
 	font-size: 25px;
 	color: white;
 	    text-align: center;
 }
+
+#dataFrame {
+	display: inline-block;
+	width: 100%;
+	height: 550px;
+	position: fixed;
+	top: 178px;
+	z-index: -1;
+}
+
+
 
 </style>
 
@@ -112,14 +140,17 @@ table,th,td,tr #main{
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script type="text/javascript">
 
-    $(document).ready(
-            function() {
-                setInterval(function() {
-                    
-									$("#autof6").load(location.href + " #autof6");
-									
-                }, 10000);
-            });
+
+$(document).ready(
+function() {
+	setInterval(function() {
+	    
+		$("#autof6").load(location.href + " #autof6");
+						
+	}, 10000);
+});
+
+
 function startTime()
 {
 var today=new Date()
@@ -139,6 +170,7 @@ s=checkTime(s)
 
 document.getElementById('clock').innerHTML=  + h+":"+m+":"+s+" Ngày " + d+" Tháng "+t+" Năm "+y
 t=setTimeout('startTime()', 500)
+
 }
 
 function checkTime(i)
@@ -153,29 +185,31 @@ window.onload = function() {
   startTime;
 };
 
+
 </script>
 </head>
-<body onload="startTime();GetValue()">
-
+<body onload="startTime();">
   
 
 <div class="title">
-<div class="t1">
+	<div class="t1">
 
-HIỆP HỘI VÀNG HUYỆN HẢI HẬU
+	HIỆP HỘI VÀNG HUYỆN HẢI HẬU
 
+	</div>
+	<div class="t1">
+
+	TIỆM VÀNG QUỐC HẢI
+
+	</div>
+
+	<div class="t3">
+
+	HÂN HẠNH KÍNH CHÀO QUÝ KHÁCH
+
+	</div>
 </div>
-<div class="t1">
-
-TIỆM VÀNG QUỐC HẢI
-
-</div>
-
-<div class="t3">
-
-HÂN HẠNH KÍNH CHÀO QUÝ KHÁCH
-
-</div>
+<!-- 
 
 
 
@@ -184,7 +218,6 @@ HÂN HẠNH KÍNH CHÀO QUÝ KHÁCH
 
 GIÁ VÀNG HÔM NAY
 
-</div>
 <div id="clock">
 </div>
 </div>
@@ -201,27 +234,22 @@ GIÁ VÀNG HÔM NAY
 
 <tr>
  <td><div class="l1 ">VÀNG 99,9%</div></td>
- <td>5255</td>
+ <td>5275</td>
  
- <td>5285</td>
- 
+ <td>5305</td>
 </tr>
-<tr>
- <td><div class="l1 ">RIÊNG</div></td>
- <td></td>
- 
- <td></td>
- 
-</tr>
-
-
-
 
 </table>
 </div>
+
+
+ -->
 <div class="chay">
 <marquee scrollamount="10"> <b>Vàng bạc Quốc Hải - Đ/c: Xóm Mới, Hải Trung, Hải Hậu, Nam Định - Xin kính chào quý khách - Chuyên nhẫn cưới trang sức 10k - 14k - 18k - 24k   Đảm bảo - uy tín - chất lượng - chính xác</b></font></marquee>
 </div>
+<iframe src="http://hite.vn/hhhh/?fbclid=IwAR0IOUXE9JV-GxZm4how3IpIuxkZe8dVb2LLPjpp_3Uo3XPfmbqcuxdJ378" name="targetframe" allowTransparency="true" scrolling="no" frameborder="0" id="dataFrame">
+</iframe>
+
 
 </body>
 </html>
