@@ -1,214 +1,244 @@
-<html><head><title>Gold Viewer - Bang gia vang</title>
+<html>
+
+<head>
+  <title>Gold Viewer - Bang gia vang</title>
   <meta charset="UTF-8">
 
   <style>
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  body {
-      background: #A41101 ;
+    body {
+      background: #A41101;
 
-  }
-  .chay {
-    white-space: nowrap;
-    margin-top:	2px;
-    background-color: 	black;
-    padding-top:2px;
-    padding-bottom: 2px;
-    color: #0073dd;
-    word-spacing: 15px;
-    font-weight: 900;
-    font-family: verdana;
-    font-size:40px;
-    text-transform: uppercase;
-    position: fixed;
-    bottom: 0;
-    z-index: -2;
-  }
+    }
 
-  table,th,td,tr #main{
-     border-collapse:collapse;
-     border: 6px solid black;
-     font-size: 52px;
-     font-weight: 900;
-     color: white;
-     font-family: Arial, Helvetica, sans-serif;
-     padding-left: 20px;
-     text-align:center;
-     padding-top: 2px;
-     padding-bottom: 2px;
+    .chay {
+      white-space: nowrap;
+      margin-top: 2px;
+      background-color: black;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      color: #0073dd;
+      word-spacing: 15px;
+      font-weight: 900;
+      font-family: verdana;
+      font-size: 40px;
+      text-transform: uppercase;
+      position: fixed;
+      bottom: 0;
+      z-index: -2;
+    }
 
-  }
-  .l1 {
+    table,
+    th,
+    td,
+    tr #main {
+      border-collapse: collapse;
+      border: 6px solid black;
+      font-size: 52px;
+      font-weight: 900;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      padding-left: 20px;
+      text-align: center;
+      padding-top: 2px;
+      padding-bottom: 2px;
+
+    }
+
+    .l1 {
 
       text-align: center;
       align-items: center;
       font-size: 30px;
       font-weight: 700;
-    color: yellow;
-  }
-  .tenhh {
-
-    font-size: 25px;
       color: yellow;
-      font-weight: bold;
-     background-color: black;
-      text-align: center;
-    padding: 1px;}
-  .t1 {
+    }
 
-    font-size: 45px;
-      color: yellow;
-      font-weight: bold;
-     background-color: black;
-      text-align: center;
-    padding: 1px;}
-  .t1l {
+    .tenhh {
 
-    font-size: 50px;
-      color: yellow;
-      font-weight: bold;
-
-      text-align: center;
-    padding-left:30px;
-    float:left;}
-  .t1p {
-
-    font-size: 30px;
+      font-size: 25px;
       color: yellow;
       font-weight: bold;
       background-color: black;
       text-align: center;
-    padding-top: 50px;
-    float: right;}
-  .t3 {
+      padding: 1px;
+    }
 
-    font-size: 25px;
+    .t1 {
+
+      font-size: 45px;
+      color: yellow;
+      font-weight: bold;
+      background-color: black;
+      text-align: center;
+      padding: 1px;
+    }
+
+    .t1l {
+
+      font-size: 50px;
+      color: yellow;
+      font-weight: bold;
+
+      text-align: center;
+      padding-left: 30px;
+      float: left;
+    }
+
+    .t1p {
+
+      font-size: 30px;
+      color: yellow;
+      font-weight: bold;
+      background-color: black;
+      text-align: center;
+      padding-top: 50px;
+      float: right;
+    }
+
+    .t3 {
+
+      font-size: 25px;
       color: #17e1de;
       font-weight: bold;
       background-color: black;
       text-align: center;
     }
-  .t2{
 
-    font-size: 35px;
-        color: yellow;
+    .t2 {
+
+      font-size: 35px;
+      color: yellow;
       font-weight: bold;
 
       text-align: center;
-    padding: 5px;}
-  .t21{
+      padding: 5px;
+    }
 
-    font-size: 27px;
-        color: #fff;
+    .t21 {
+
+      font-size: 27px;
+      color: #fff;
       font-weight: bold;
 
       text-align: center;
-    padding-top: 20px;
-    float: left;}
-  .Va {
-
-    font-size: 20px;
-      color: yellow;
-
-
+      padding-top: 20px;
+      float: left;
     }
-  .ti1 {
 
-    font-size: 30px;
+    .Va {
+      font-size: 20px;
       color: yellow;
-
-
     }
-  #ngay-thang {
-    font-size: 30px;
-    color: white;
-  }
 
-  #dataFrame {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    height: 472px;
-    z-index: -1;
-  }
+    .ti1 {
+      font-size: 30px;
+      color: yellow;
+    }
 
-  #maqquee_text {
-    padding: 1px;
-  }
+    #ngay-thang {
+      font-size: 30px;
+      color: white;
+    }
 
-  #marquee {
-    color: #000;
-    height: 16px;
-    padding-bottom: 5px;
-  }
-</style>
+    #maqquee_text {
+      padding: 1px;
+    }
+
+    #marquee {
+      color: #000;
+      height: 16px;
+      padding-bottom: 5px;
+    }
+
+    .iframe-container {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      z-index: -1;
+      height: 593px;
+    }
+
+    #dataFrame {
+      margin-top: -80px;
+      flex: 1;
+      height: 593px;
+    }
+
+    .price-chart {
+      margin-top: 100px;
+      width: 630px;
+      height: 410px;
+    }
+  </style>
 
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
   <script type="text/javascript">
-    $(function() {
+    $(function () {
 
       var marquee = $("#marquee");
-      marquee.css({"overflow": "hidden", "width": "100%", "white-space": "nowrap"});
+      marquee.css({ "overflow": "hidden","width": "100%","white-space": "nowrap" });
 
       // wrap "My Text" with a span (IE doesn't like divs inline-block)
       marquee.wrapInner("<span>");
-      marquee.find("span").css({ "width": "auto", "white-space": "nowrap", "display": "inline-block", "text-align":"center", "padding-right": "10px" });
+      marquee.find("span").css({ "width": "auto","white-space": "nowrap","display": "inline-block","text-align": "center","padding-right": "10px" });
       var w = marquee.find("span").width();
       marquee.append(marquee.find("span").clone()); // now there are two spans with "My Text"
 
       marquee.wrapInner("<div>");
-      marquee.find("div").css("width", (w*2)+'px');
+      marquee.find("div").css("width",(w * 2) + 'px');
 
-      var reset = function() {
-          $(this).css("margin-left", "0");
-          $(this).animate({ "margin-left": "-"+w+"px" }, 40000, 'linear', reset);
+      var reset = function () {
+        $(this).css("margin-left","0");
+        $(this).animate({ "margin-left": "-" + w + "px" },40000,'linear',reset);
       };
 
       reset.call(marquee.find("div"));
 
     });
 
-  function startTime()
-  {
-  var today=new Date()
-  var h=today.getHours()
-  var m=today.getMinutes()
-  var s=today.getSeconds()
-  var d=today.getDate()
-  var t=today.getMonth()+1
-  var y=today.getFullYear()
+    function startTime() {
+      var today = new Date()
+      var h = today.getHours()
+      var m = today.getMinutes()
+      var s = today.getSeconds()
+      var d = today.getDate()
+      var t = today.getMonth() + 1
+      var y = today.getFullYear()
 
-  //to add a zero in front of numbers<10
+      //to add a zero in front of numbers<10
 
-  h=checkTime(h)
-  m=checkTime(m)
-  s=checkTime(s)
-
-
-  document.getElementById('clock').innerHTML=  + h+":"+m+":"+s+" Ngày " + d+" Tháng "+t+" Năm "+y
-  t=setTimeout('startTime()', 500)
-  }
-
-  function checkTime(i)
-  {
-  if (i<10)
-  { i="0" + i}
-  return i
-  }
+      h = checkTime(h)
+      m = checkTime(m)
+      s = checkTime(s)
 
 
-  window.onload = function() {
-    startTime;
-  };
+      document.getElementById('clock').innerHTML = + h + ":" + m + ":" + s + " Ngày " + d + " Tháng " + t + " Năm " + y
+      t = setTimeout('startTime()',500)
+    }
+
+    function checkTime(i) {
+      if (i < 10) { i = "0" + i }
+      return i
+    }
+
+
+    window.onload = function () {
+      startTime;
+    };
 
   </script>
-  </head>
-  <body>
+</head>
+
+<body>
 
   <div class="title">
     <div class="tenhh">
@@ -224,12 +254,23 @@
     </div>
   </div>
 
-  <iframe src="https://hite.vn/hhhh/hiephoivanghaihaunamdinh.php/trunghuu/" name="targetframe" allowTransparency="true" scrolling="no" frameborder="0" id="dataFrame"></iframe>
+  <div class="iframe-container">
+    <iframe src="https://hite.vn/hhhh/hiephoivanghaihaunamdinh.php/trunghuu/" name="targetframe"
+      allowTransparency="true" scrolling="no" frameborder="0" id="dataFrame">
+    </iframe>
+    <iframe src="https://www.kitco.com/images/live/gold.gif" scrolling="no" frameborder="0"
+      class="price-chart"></iframe>
+  </div>
+
 
 
   <div class="chay">
-    <marquee scrollamount="10" loop=”-1″> <div id="maqquee_text">Vàng bạc Quốc Hải - Đ/c: Xóm Mới, Hải Trung, Hải Hậu, Nam Định Xin kính chào quý khách - Chuyên nhẫn cưới trang sức 10k - 14k - 18k - 24k Đảm bảo - uy tín - chất lượng </div></marquee>
+    <marquee scrollamount="10" loop=”-1″>
+      <div id="maqquee_text">Vàng bạc Quốc Hải - Đ/c: Xóm Mới, Hải Trung, Hải Hậu, Nam Định Xin kính chào quý khách -
+        Chuyên nhẫn cưới trang sức 10k - 14k - 18k - 24k Đảm bảo - uy tín - chất lượng </div>
+    </marquee>
   </div>
 
-  </body>
-  </html>
+</body>
+
+</html>
